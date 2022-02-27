@@ -60,7 +60,7 @@ const CrawlHTMLV2 = (html) => {
         let headTitle = $(titleContent).find("span > a").text().replace(/\s+|([.,])(?=\S)/g, '$1 ').replace(/^\s|\s$/g, '');
         headTitle = toPascalCase(headTitle);
         
-        model[headTitle] = {[headTitle]: {}}
+        model[headTitle] = {};
 
         const content = curr.last(); // get collapse div
 
@@ -91,7 +91,7 @@ const CrawlHTMLV2 = (html) => {
 
     })
 
-    console.log(model);
+    return model;
 }
 
 function toPascalCase(str){
