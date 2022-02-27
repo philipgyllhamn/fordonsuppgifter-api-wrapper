@@ -9,10 +9,26 @@ Not ready for production, needs error handling implemented.
 
 ## Usage
 ```
-const transportAPI = require('../src/index');
+
+const api2 = require("fordonsuppgifter-api-wrapper");
 
 (async () => {
-    const res = await transportAPI.GetVehicleInformation("XXX000");
+    console.log("fetching vehicle info");
+    var res = await api2.GetVehicleInformation("JWZ148");
+
     console.log(res);
 })();
 ```
+
+```
+import * as api from "fordonsuppgifter-api-wrapper";
+
+(async () => {
+    console.log("fetching vehicle info");
+    var res = await api2.GetVehicleInformation("JWZ148");
+
+    console.log(res);
+})();
+
+```
+
