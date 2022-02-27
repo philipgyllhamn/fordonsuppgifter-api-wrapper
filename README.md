@@ -1,4 +1,4 @@
-# Transportstyrelsen Fordonsuppgifter (Vehicle Details) NodeJS API Wrapper
+# Transportstyrelsen Fordonsuppgifter NodeJS API Wrapper
 NodeJS API wrapper/scraper for swedish Transportstyrelsen's service "Fordonsuppgifter" (Vehicle Details). 
 
 ## About
