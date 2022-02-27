@@ -280,6 +280,8 @@ exports.TestCrawlV2 = async (regnr) => {
     return CrawlHTMLV2(html);
 }
 
+// maps data dynamically to a dynamic model, model/data is not static
+// property names are in swedish
 exports.GetVehicleInformation = async (regnr) => {
     if(!regnr) return "no registration number attached";
     if(!ValidateRegNr(regnr)) return "not a valid registration number"
@@ -288,8 +290,13 @@ exports.GetVehicleInformation = async (regnr) => {
     return CrawlHTMLV2(html);
 }
 
-// (async () => { 
-//     const html = await LoadHTMLFromPage();
-//     CrawlHTML(html);
-// })(); 
+// uses the old version of the crawler
+// maps data to a static model with english property names, will not always be correct, use at own risk
+exports.GetVehicleInformationEnglish = async (regnr) => {
+    if(!regnr) return "no registration number attached";
+    if(!ValidateRegNr(regnr)) return "not a valid registration number"
+
+    const html = await LoadHTMLFromPage(regnr);
+    return CrawlHTML(html);
+}
 
