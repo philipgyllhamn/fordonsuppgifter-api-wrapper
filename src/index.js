@@ -274,12 +274,6 @@ const ValidateRegNr = (regnr) => {
 exports.TestValidateReg = (regnr) => {
     return ValidateRegNr(regnr)
 }
-
-exports.TestCrawlV2 = async (regnr) => {
-    const html = await LoadHTMLFromPage(regnr);
-    return CrawlHTMLV2(html);
-}
-
 // maps data dynamically to a dynamic model, model/data is not static
 // property names are in swedish
 exports.GetVehicleInformation = async (regnr) => {
