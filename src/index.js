@@ -74,7 +74,7 @@ const CrawlHTMLV2 = (html) => {
     
             const titleContent = curr.first();
             let headTitle = $(titleContent).find("span > a").text().replace(/\s+|([.,])(?=\S)/g, '$1 ').replace(/^\s|\s$/g, '');
-            headTitle = toPascalCase(headTitle);
+            headTitle = toPascalCase(replaceSpecialCharacters(headTitle));
             
             model[headTitle] = {};
     
