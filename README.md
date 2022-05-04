@@ -7,6 +7,11 @@ This code web scrapes transportstyrelsen service "Fordonsuppgifter" which retrie
 ### Disclaimer
 Not ready for production, needs error handling implemented.
 
+## Installation
+```
+npm i fordonsuppgifter-api-wrapper
+```
+
 ## Usage
 ```
 
@@ -25,7 +30,7 @@ import * as api from "fordonsuppgifter-api-wrapper";
 
 (async () => {
     console.log("fetching vehicle info");
-    var res = await api2.GetVehicleInformation("JWZ148");
+    var res = await api.GetVehicleInformation("JWZ148");
 
     console.log(res);
 })();
