@@ -37,3 +37,12 @@ import * as api from "fordonsuppgifter-api-wrapper";
 
 ```
 
+
+## English version usage
+
+There is also a static parser that parses and sets the model names to english, this version will work most times, but not always. Since its static and the main version is mapping dynamically.
+
+```
+var res = await api2.GetVehicleInformationEnglish("JWZ148");
+```
+
