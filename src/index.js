@@ -16,7 +16,7 @@ const LoadHTMLFromPage = async (regnr) => {
         
                 await page.goto('https://fu-regnr.transportstyrelsen.se/extweb/UppgifterAnnatFordon')
             
-                await page.waitForTimeout(500);
+                await page.waitForFunction("document.querySelector('#recaptchaClientToken').value !== ''")
             
                 await page.fill('#ts-regnr-sok', regnr);
             
