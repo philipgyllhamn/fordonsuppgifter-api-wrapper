@@ -14,7 +14,7 @@ const LoadHTMLFromPage = async (regnr) => {
                 
                 const page = await context.newPage()
         
-                await page.goto('https://fu-regnr.transportstyrelsen.se/extweb/UppgifterAnnatFordon')
+                await page.goto('https://fordon-fu-regnr.transportstyrelsen.se/UppgifterAnnatFordon')
             
                 await page.waitForTimeout(500);
                 // await page.waitForFunction("document.querySelector('#recaptchaClientToken').value !== ''")
@@ -23,10 +23,8 @@ const LoadHTMLFromPage = async (regnr) => {
             
                 await page.locator('#btnSok').click();
         
-                await page.waitForURL('https://fu-regnr.transportstyrelsen.se/extweb/UppgifterAnnatFordon/Fordonsuppgifter');
+                await page.waitForURL('https://fordon-fu-regnr.transportstyrelsen.se/UppgifterAnnatFordon/Fordonsuppgifter');
                 
-                await page.locator('#expand_button').click();
-        
                 html = await page.content();
             
                 await browser.close();
